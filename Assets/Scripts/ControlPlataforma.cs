@@ -5,7 +5,7 @@ using UnityEngine;
 public class ControlPlataforma : MonoBehaviour
 {
     public GameObject jugador;
-    [SerializeField] private Animator myAnimationController; 
+    public Animator myAnimationController; 
 
     public void OnTriggerEnter(Collider col)
     {
