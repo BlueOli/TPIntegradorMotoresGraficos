@@ -7,6 +7,7 @@ public class ControlCamara : MonoBehaviour
 
     public float sensibilidad = 5.0f;
     public float suavizado = 2.0f;
+    public bool toggleZoom = false;
 
     GameObject jugador;
 
@@ -28,5 +29,20 @@ public class ControlCamara : MonoBehaviour
         mouseMirar.y = Mathf.Clamp(mouseMirar.y, -90f, 90f);
         transform.localRotation = Quaternion.AngleAxis(-mouseMirar.y, Vector3.right);
         jugador.transform.rotation = Quaternion.AngleAxis(mouseMirar.x, jugador.transform.up);
+
+
+        //Zoom!
+        if (Input.GetMouseButtonDown(1)) toggleZoom = !toggleZoom;
+
+        if (toggleZoom)
+        {
+            Camera.main.fieldOfView = 25;
+        }
+        else
+        {
+            Camera.main.fieldOfView = 60;
+        }
+
+
     }
 }
