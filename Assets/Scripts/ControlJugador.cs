@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
+[System.Serializable]
+public class DataPersistencia
+{
+    public float totalTime;
+    public float totalDistance;
+}
+
 
 public class ControlJugador : MonoBehaviour
 {
     public float rapidezDesplazamiento = 10.0f;
-    
     public Camera camaraPrimeraPersona;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
     void Update()
     {
         float movimientoAdelanteAtras = Input.GetAxis("Vertical") * rapidezDesplazamiento;
@@ -34,7 +41,7 @@ public class ControlJugador : MonoBehaviour
             if ((Physics.Raycast(ray, out hit) == true))
             {
                 Debug.Log("El rayo tocó al objeto: " + hit.collider.tag);
-                if(hit.collider.tag == "TP1")
+                if (hit.collider.tag == "TP1")
                 {
                     transform.position = new Vector3(527f, 90f, 125f);
                 }
@@ -58,6 +65,8 @@ public class ControlJugador : MonoBehaviour
                 }
             }
         }
-
     }
 }
+
+
+
