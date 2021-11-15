@@ -20,6 +20,16 @@ public class ControlJuego : MonoBehaviour
         {
             ComenzarJuego();
         }
+
+        if (personaje.transform.position.x > 990 || personaje.transform.position.x < 10)
+        {
+            ComenzarJuego();
+        }
+
+        if (personaje.transform.position.y > 990 || personaje.transform.position.y < 10)
+        {
+            ComenzarJuego();
+        }
     }
 
     void ComenzarJuego() //Instancio todas mis variables necesarias
