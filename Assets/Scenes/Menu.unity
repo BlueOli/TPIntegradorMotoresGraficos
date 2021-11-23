@@ -316,7 +316,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 0}
     m_HighlightedColor: {r: 0.9921569, g: 0.96470594, b: 0.8078432, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9921569, g: 0.96470594, b: 0.8078432, a: 1}
+    m_SelectedColor: {r: 0.9921569, g: 0.96470594, b: 0.8078432, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -335,7 +335,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75421596}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1753120403}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75421596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,7 +847,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.29803923, g: 0.29803923, b: 0.29803923, a: 0}
     m_HighlightedColor: {r: 0.9921569, g: 0.96470594, b: 0.8078432, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9921569, g: 0.96470594, b: 0.8078432, a: 1}
+    m_SelectedColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

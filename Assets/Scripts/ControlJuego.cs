@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ControlJuego : MonoBehaviour
+    public class ControlJuego : MonoBehaviour
 {
 
     public GameObject personaje;
@@ -16,6 +17,11 @@ public class ControlJuego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("escape")) //Reset
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+
         if (Input.GetKeyDown("r")) //Reset
         {
             ComenzarJuego();

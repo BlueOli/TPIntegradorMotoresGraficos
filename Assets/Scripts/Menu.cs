@@ -9,4 +9,10 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Saliste del juego");
+        Application.Quit();
+    }
 }

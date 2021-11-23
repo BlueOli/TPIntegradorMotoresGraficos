@@ -9,7 +9,8 @@ public class ControlCamara : MonoBehaviour
     public float suavizado = 2.0f;
     public bool toggleZoom = false;
 
-    GameObject jugador;
+    public GameObject jugador;
+    public Camera camera;
 
     void Start()
     {
@@ -36,11 +37,11 @@ public class ControlCamara : MonoBehaviour
 
         if (toggleZoom)
         {
-            Camera.main.fieldOfView = 25;
+            camera.fieldOfView = 25;
         }
         else
         {
-            Camera.main.fieldOfView = 60;
+            camera.fieldOfView = 60;
         }
 
 
